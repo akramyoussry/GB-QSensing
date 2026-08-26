@@ -237,13 +237,13 @@ def sensing_protocol(dataset_x_sensing, dataset_y_sensing, idx_key, F, prior, pr
     plt.subplot(1,2,2)
     
     plt.plot(range(1, n_Sensing+2), sum(est_WB)/num_permutations, label="WB")
-    plt.fill_between(range(1, n_Sensing+2), (sum(est_WB) - sum(var_WB)*0.5)/num_permutations, (sum(est_WB) + sum(var_WB)*0.5)/num_permutations, alpha=0.1)
+    plt.fill_between(range(1, n_Sensing+2), (sum(est_WB) - sum(np.sqrt(var_WB))*0.5)/num_permutations, (sum(est_WB) + sum(np.sqrt(var_WB))*0.5)/num_permutations, alpha=0.1)
     
     plt.plot(range(1, n_Sensing+2), sum(est_GB)/num_permutations, label="GB")
-    plt.fill_between(range(1, n_Sensing+2), (sum(est_GB) - sum(var_GB)*0.5)/num_permutations, (sum(est_GB) + sum(var_GB)*0.5)/num_permutations, alpha=0.1)
+    plt.fill_between(range(1, n_Sensing+2), (sum(est_GB) - sum(np.sqrt(var_GB))*0.5)/num_permutations, (sum(est_GB) + sum(np.sqrt(var_GB))*0.5)/num_permutations, alpha=0.1)
     
     plt.plot(range(1, n_Sensing+2), sum(est_BB)/num_permutations, label="BB")
-    plt.fill_between(range(1, n_Sensing+2), (sum(est_BB) - sum(var_BB)*0.5)/num_permutations, (sum(est_BB) + sum(var_BB)*0.5)/num_permutations, alpha=0.1)
+    plt.fill_between(range(1, n_Sensing+2), (sum(est_BB) - sum(np.sqrt(var_BB))*0.5)/num_permutations, (sum(est_BB) + sum(np.sqrt(var_BB))*0.5)/num_permutations, alpha=0.1)
     
     
     plt.axhline(fb_true, linestyle="--", color="black", label="True")
