@@ -5,4 +5,4 @@ The repository includes the raw experimental dataset *"raw_dataset.csv"* as well
 
 In order to run the whole workflow, follow these steps:
 1) Run *"python3 train_model.py GB"*. This will train the GB model. To train the BB small/larger models use either *"python3 train_model.py BB_small"* or *"python3 train_model.py BB_large"*
-2) Run the notebook *"Sensing_Example.ipynb"*, this will run the Bayesian procedure and generate all figures.
+2) Run the notebook *"Sensing_Example_Full.ipynb"*, this will run the Bayesian procedure and generate all figures.
